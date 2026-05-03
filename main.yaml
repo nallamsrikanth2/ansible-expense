@@ -1,4 +1,4 @@
-- name: configure the "{{ component }}"
+- name: configure the server
   tasks: "{{ component }}"
   become: yes
   roles:
