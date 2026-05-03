@@ -28,3 +28,7 @@
 - name: print the information of mysql_output
   ansible.builtin.debug:
     msg: "{{mysql_output}}"
+
+- name: set up root password
+  ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1
+  when: mysql_output.failed is true
