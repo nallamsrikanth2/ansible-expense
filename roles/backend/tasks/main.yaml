@@ -69,5 +69,5 @@
     name: all
     state: import
     target: /app/schema/backend.sql
-    notify:
-    - restart backend
+  notify:
+  - restart backend
