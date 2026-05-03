@@ -54,6 +54,13 @@
     state: started
     enabled: yes
 
+- name: install the python libraries and dependencies
+  ansible.builtin.pip:
+    name:
+    - pymysql
+    - cryptography
+    executable: pip3.9
+
 - name: impot the mysql
   community.mysql.mysql_db:
     login_user: "{{login_user}}"
