@@ -23,6 +23,7 @@
     login_host: "{{login_host}}"
     filter: version
   register: mysql_output
+  ignore_errors: True
 
 - name: print the information of mysql_output
   ansible.builtin.debug:
