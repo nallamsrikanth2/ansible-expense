@@ -69,8 +69,5 @@
     name: all
     state: import
     target: /app/schema/backend.sql
-
-- name: restarted the server
-  ansible.builtin.service:
-    name: backend
-    state: restarted
+    notify:
+    - restart backend
